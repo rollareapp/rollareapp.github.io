@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rollare — Free Tournament Bracket Maker</title>
+<meta name="description" content="Rollare is a free tournament bracket maker for organizers: run Swiss, group + knockout and 8 formats with live score entry, an audit trail and poster-grade PNG & PDF exports.">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --ink: #1a1d23;
+    --muted: #5c6470;
+    --accent: #cf4700;
+    --accent-dark: #a83a00;
+    --line: #e6e4dd;
+    --chip: #fdf1ea;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .brand-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 0;
+  }
+  .brand {
+    font-weight: 800; font-size: 1.25rem; letter-spacing: -0.02em;
+    color: var(--ink); text-decoration: none;
+  }
+  .brand .dot { color: var(--accent); }
+  .brand-tag { font-size: 0.85rem; color: var(--muted); }
+  .hero { padding: 72px 0 56px; }
+  .hero h1 {
+    font-size: 2.6rem; line-height: 1.15; letter-spacing: -0.03em;
+    max-width: 720px; margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lead {
+    font-size: 1.2rem; color: var(--muted); max-width: 640px; margin-bottom: 28px;
+  }
+  .cta {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: 13px 26px; border-radius: 10px; text-decoration: none;
+    font-weight: 700; font-size: 1rem;
+  }
+  .cta:hover { background: var(--accent-dark); }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .features { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .features li {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 18px 20px; font-size: 0.98rem;
+  }
+  .features li strong { display: block; margin-bottom: 4px; font-size: 1.02rem; }
+  .features li span { color: var(--muted); font-size: 0.92rem; }
+  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .tool {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 22px;
+  }
+  .tool h3 { font-size: 1.08rem; margin-bottom: 8px; }
+  .tool h3 a { color: var(--accent); text-decoration: none; }
+  .tool h3 a:hover { text-decoration: underline; }
+  .tool p { color: var(--muted); font-size: 0.94rem; }
+  .about { max-width: 720px; color: var(--muted); }
+  .about p { margin-bottom: 16px; }
+  .about a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .about a:hover { text-decoration: underline; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .chip {
+    background: var(--chip); color: var(--accent-dark);
+    border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; font-weight: 600;
+  }
+  footer {
+    border-top: 1px solid var(--line); background: var(--surface);
+    padding: 32px 0; margin-top: 40px;
+  }
+  .foot-row {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+    font-size: 0.9rem; color: var(--muted);
+  }
+  footer a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  footer a:hover { color: var(--accent); }
+  @media (max-width: 640px) {
+    .features, .tools { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 48px 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap brand-row">
+    <a class="brand" href="https://rollare.com">Rollare<span class="dot">.</span></a>
+    <span class="brand-tag">Tournament management, minus the spreadsheet</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Free tournament bracket maker for organizers who actually run events</h1>
+    <p class="lead">Rollare covers the whole run of show: pick a format, seed players, enter scores live, and ship a results poster your players will want to share. No spreadsheets, no whiteboard photos.</p>
+    <a class="cta" href="https://rollare.com">Open Rollare</a>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>What Rollare does</h2>
+      <ul class="features">
+        <li><strong>8 tournament formats</strong><span>Single elimination, double elimination, round robin, and more — including Swiss and group + knockout, so you can run a real league day, not just a ladder.</span></li>
+        <li><strong>Live score entry with an audit trail</strong><span>Report results from any device during the event. Every change is logged, so disputed rounds and corrections stay transparent.</span></li>
+        <li><strong>Poster-grade PNG &amp; PDF export</strong><span>One click turns your final standings and brackets into print-ready graphics for socials, notice boards and the venue wall.</span></li>
+        <li><strong>Public tournament pages</strong><span>Share a link and anyone can follow standings, fixtures and results in real time — no app install, no account needed to watch.</span></li>
+        <li><strong>Four languages built in</strong><span>EN · JA · KO · ZH, so international player pools read the interface in their own language instead of guessing.</span></li>
+        <li><strong>Chrome extension</strong><span>Handy tools live one click from your browser, so running a casual bracket between meetings doesn't require ceremony.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What you can do right now</h2>
+      <div class="tools">
+        <div class="tool">
+          <h3><a href="https://rollare.com/tools/swiss-tournament-generator">Swiss tournament generator</a></h3>
+          <p>Pair rounds automatically by standing, handle byes and odd player counts, and let a 24-player event run itself round after round.</p>
+        </div>
+        <div class="tool">
+          <h3><a href="https://rollare.com/templates">Tournament templates</a></h3>
+          <p>Start from a pre-built setup instead of a blank page — common formats and player counts are already configured and ready to clone.</p>
+        </div>
+        <div class="tool">
+          <h3><a href="https://rollare.com/tools/team-randomizer">Team randomizer</a></h3>
+          <p>Split a lobby of players into balanced teams in seconds, then push the result straight into a tournament when the fun needs a scoreboard.</p>
+        </div>
+        <div class="tool">
+          <h3><a href="https://rollare.com">Rollare</a></h3>
+          <p>The full toolkit lives at rollare.com — create an account, build your first bracket, and run your next event end to end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap about">
+      <h2>Built for the person holding the clipboard</h2>
+      <p>Rollare is made for community organizers: game shops running weekly ladders, offices running lunch-hour esports, schools running club leagues, and tournament crews that outgrew chat-group scorekeeping. The flow is deliberately short — set up, seed, play, publish — because on event day nobody has time to learn software.</p>
+      <p>Everything runs in the browser. Players check in on their phones, the organizer enters or approves scores, and the public tournament page updates as rounds close. When it's done, export the standings as a poster and the event lives on beyond the venue.</p>
+      <div class="chips">
+        <span class="chip">Swiss</span>
+        <span class="chip">Group + Knockout</span>
+        <span class="chip">Double Elimination</span>
+        <span class="chip">Round Robin</span>
+        <span class="chip">Free to start</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 Rollare · Free tournament bracket maker</span>
+    <a href="https://github.com/rollareapp">github.com/rollareapp</a>
+  </div>
+</footer>
+
+</body>
+</html>
